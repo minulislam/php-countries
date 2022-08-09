@@ -11,7 +11,7 @@ PHP Countries is a library that provides an elegant syntax to country data.
 You can install PHP Countries via Composer, as follows.
 
 ```
-composer require rapidwebltd/php-countries
+composer require minulislam/php-countries
 ```
 
 ## Usage
