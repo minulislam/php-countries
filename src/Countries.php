@@ -1,9 +1,9 @@
 <?php
 
-namespace RapidWeb\Countries;
+namespace Minulislam\Countries;
 
-use RapidWeb\Countries\DataSources\MledozeCountriesJson;
-use RapidWeb\Countries\Interfaces\DataSourceInterface;
+use Minulislam\Countries\DataSources\MledozeCountriesJson;
+use Minulislam\Countries\Interfaces\DataSourceInterface;
 
 class Countries
 {
@@ -48,23 +48,5 @@ class Countries
         }
     }
 
-    public function getByLanguage(string $language)
-    {
-        $countries = [];
 
-        foreach ($this->all() as $country) {
-            foreach ($country->languages as $countryLanguage) {
-                if ($countryLanguage == $language) {
-                    $countries[] = $country;
-                }
-            }
-            foreach ($country->languageCodes as $countryLanguageCode) {
-                if ($countryLanguageCode == $language) {
-                    $countries[] = $country;
-                }
-            }
-        }
-
-        return $countries;
-    }
 }

@@ -19,7 +19,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "RapidWeb\\Countries\\": "src/"
+            "Minulislam\\Countries\\": "src/"
         }
     }
 }

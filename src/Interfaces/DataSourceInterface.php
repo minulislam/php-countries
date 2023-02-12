@@ -1,6 +1,6 @@
 <?php
 
-namespace RapidWeb\Countries\Interfaces;
+namespace Minulislam\Countries\Interfaces;
 
 interface DataSourceInterface
 {

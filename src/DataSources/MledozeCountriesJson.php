@@ -1,10 +1,10 @@
 <?php
 
-namespace RapidWeb\Countries\DataSources;
+namespace Minulislam\Countries\DataSources;
 
 use Exception;
-use RapidWeb\Countries\Country;
-use RapidWeb\Countries\Interfaces\DataSourceInterface;
+use Minulislam\Countries\Country;
+use Minulislam\Countries\Interfaces\DataSourceInterface;
 
 class MledozeCountriesJson implements DataSourceInterface
 {
@@ -38,20 +38,11 @@ class MledozeCountriesJson implements DataSourceInterface
             $country = new Country();
             $country->name = $countryDataItem->name->common;
             $country->officialName = $countryDataItem->name->official;
-            // $country->topLevelDomains = $countryDataItem->tld;
             $country->isoCodeAlpha2 = $countryDataItem->cca2;
             $country->isoCodeAlpha3 = $countryDataItem->cca3;
-        $country->isoCodeNumeric = $countryDataItem->ccn3;
-            // $country->languages = array_values((array) $countryDataItem->languages);
-            // $country->languageCodes = array_keys((array) $countryDataItem->languages);
-           // $country->currencyCodes = $countryDataItem->currencies;
-          //  $country->callingCodes = $countryDataItem->callingCode;
-            // $country->capital = $countryDataItem->capital;
+            $country->isoCodeNumeric = $countryDataItem->ccn3;
             $country->region = $countryDataItem->region;
             $country->subregion = $countryDataItem->subregion;
-           // $country->latitude = isset($countryDataItem->latlng[0]) ? $countryDataItem->latlng[0] : null;
-           // $country->longitude = isset($countryDataItem->latlng[1]) ? $countryDataItem->latlng[1] : null;
-          //  $country->areaInKilometres = $countryDataItem->area;
 
             $countries[] = $country;
         }
